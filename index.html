@@ -5,6 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
+  #a {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  animation: myfirst 5s linear 2s infinite alternate;
+}
+
+@keyframes myfirst {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
 #myDIV {
 
   border: 1px solid red;;
@@ -287,7 +302,7 @@ and is wrapped around the whole page content, except for the footer in this exam
     </div>
 
     <div class="w3-container .w3-animate-opacity">
-      <p>Como se puede apreciar en la imagen, se puede ver mi arbol que tenia de chiquito con mi T-rex. También se puede apreciar como mi T-rex esta triste porque ve que mi árbol fue absorvio por el 
+      <p>Como se puede apreciar en la imagen, se puede ver mi <div id='a'><div>arbol que tenia de chiquito con mi T-rex. También se puede apreciar como mi T-rex esta triste porque ve que mi árbol fue absorvio por el 
       capitalismo que tenemos hoy en día</p>
       <div class="w3-row">
         <div class="w3-col m8 s12">
