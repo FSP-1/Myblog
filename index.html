@@ -5,6 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
+   #a {
+        font-family: 'helvetica neue', helvetica, sans-serif;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        text-align: center;
+        border: 2px solid rgba(0,0,200,0.6);
+        background: rgba(0,0,200,0.3);
+        color: rgba(0,0,200,0.6);
+        box-shadow: 1px 1px 2px rgba(0,0,200,0.4);
+        border-radius: 10px;
+        padding: 3px 10px;
+        display: inline-block;
+        cursor: pointer;
+      }
 *{
   position: relative;
   animation: myfirst 5s linear 2s  alternate;
@@ -284,7 +298,7 @@ and is wrapped around the whole page content, except for the footer in this exam
 
 <!-- Header -->
 <header id='myDIV' class="w3-container w3-center w3-padding-32"> 
-  <h1><b>MI BLOG</b></h1>
+  <h1 id="a"><b>MI BLOG</b></h1>
   <p>Welcome to the blog of <span class="w3-tag">Franco</span></p>
 </header>
 
@@ -411,7 +425,16 @@ and is wrapped around the whole page content, except for the footer in this exam
   <button class="w3-button w3-black w3-padding-large w3-margin-bottom">Next »</button>
   <p>Powered by <a href="https://es.wikipedia.org/wiki/Historia_de_los_puentes" target="_blank">FrancoWeb y los puentes</a></p>
 </footer>
+<script>
+      const para = document.querySelector('#a');
 
+      para.addEventListener('click', updateName);
+
+      function updateName() {
+        let name = prompt('Pon tu nombre');
+        para.textContent = 'Player 1: ' + name;
+      }
+    </script>
 </body>
 </html>
 
